@@ -1,0 +1,114 @@
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #333;
+  color: white;
+  overflow-y: auto;
+  transition: left 0.5s ease-out;
+}
+
+#menu.hidden {
+  left: -200px;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  margin: 10px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.2s ease-in;
+}
+
+#menu a:hover {
+  background-color: #444;
+}
+
+#menu-toggle {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  z-index: 1;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  transition: left 0.5s ease-out;
+}
+
+#menu-toggle.hidden {
+  left: 0;
+}
+
+#menu-toggle:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+main {
+  margin-left: 200px;
+  padding: 20px;
+  transition: margin-left 0.5s ease-out;
+}
+
+main.shift {
+  margin-left: 0;
+  padding: 20px;
+}
+
+#color-title {
+  margin-left: 20px;
+}
+
+.color-form {
+  margin: 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button.color-button {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button.color-button::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+button.color-button[data-color="default"]::before {
+  background-color: #333;
+}
+
+button.color-button[data-color="red"]::before {
+  background-color: #ff5252;
+}
+
+button.color-button[data-color="green"]::before {
+  background-color: #4caf50;
+}
+
+button.color-button[data-color="blue"]::before {
+  background-color: #2196f3;
+}

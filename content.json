@@ -1,0 +1,44 @@
+{
+  "experiences": [
+    {
+      "beg_year": 2016,
+      "end_year": 2018,
+      "title": "Engineer",
+      "location": "Schneider",
+      "description": ""
+    },
+    {
+      "beg_year": 2018,
+      "end_year": 2019,
+      "title": "Engineer",
+      "location": "Groupama",
+      "description": ""
+    }
+  ],
+  "education": [
+    {
+      "beg_year": 2010,
+      "end_year": 2014,
+      "title": "Degree in Computer Science",
+      "location": "Universidad Complutense de Madrid",
+      "description": ""
+    },
+    {
+      "beg_year": 2014,
+      "end_year": 2015,
+      "title": "Master in Computer Science",
+      "location": "EIT",
+      "description": ""
+    }
+  ],
+  "languages" : [
+    "Spanish",
+    "French"
+  ],
+  "skills" : [
+    "Python",
+    "Spark"
+  ],
+  "additional information": [
+  ]
+}
