@@ -1,0 +1,27 @@
+#info-panel {
+  width: 300px;
+  padding: 20px;
+  background-color: #333333;
+  color: white;
+}
+
+#info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#info-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#info-list i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#info-list span:first-child {
+  font-weight: bold;
+}

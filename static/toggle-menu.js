@@ -1,6 +1,6 @@
 window.onload = () => {
   const menu = document.getElementById("menu");
-  const main = document.querySelector("main");
+  const main = document.getElementById("shift_div");
   const toggleButton = document.getElementById("menu-toggle");
 
   toggleButton.addEventListener("click", () => {

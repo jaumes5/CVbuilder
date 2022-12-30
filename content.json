@@ -1,18 +1,36 @@
 {
+  "name":"Jaime Boixadós Martínez",
+  "job_title":"Software Engineer/Data Engineer",
   "experiences": [
     {
-      "beg_year": 2016,
-      "end_year": 2018,
-      "title": "Engineer",
-      "location": "Schneider",
-      "description": ""
+        "title": "Exp1",
+        "company": "Meritis",
+        "dates": "2016-2018",
+        "description": "jqjqjq"
     },
     {
-      "beg_year": 2018,
-      "end_year": 2019,
-      "title": "Engineer",
-      "location": "Groupama",
-      "description": ""
+        "title": "Exp2",
+        "company": "Otro",
+        "dates": "2017-2019",
+        "description": "lorem ipsum"
+    },
+    {
+        "title": "Exp1",
+        "company": "Meritis",
+        "dates": "2016-2018",
+        "description": "jqjqjq"
+    },
+    {
+        "title": "Exp2",
+        "company": "Otro",
+        "dates": "2017-2019",
+        "description": "lorem ipsum"
+    },
+    {
+        "title": "Exp1",
+        "company": "Meritis",
+        "dates": "2016-2018",
+        "description": "jqjqjq"
     }
   ],
   "education": [
@@ -20,25 +38,35 @@
       "beg_year": 2010,
       "end_year": 2014,
       "title": "Degree in Computer Science",
-      "location": "Universidad Complutense de Madrid",
+      "institution": "Universidad Complutense de Madrid",
       "description": ""
     },
     {
       "beg_year": 2014,
       "end_year": 2015,
       "title": "Master in Computer Science",
-      "location": "EIT",
+      "institution": "EIT",
       "description": ""
     }
-  ],
-  "languages" : [
-    "Spanish",
-    "French"
   ],
   "skills" : [
     "Python",
     "Spark"
   ],
-  "additional information": [
-  ]
+  "additional_information": {
+    "languages" : [
+      "Spanish",
+      "French",
+      "English",
+      "Catalan",
+      "Italian"
+    ],
+    "contact": {
+      "phone": "(+33) 0770244326",
+      "linkedin": ""
+    },
+    "other": [
+    ]
+  },
+  "about": "Hello! I'm Jaime Boixadós a Software Engineer/Data Engineer."
 }

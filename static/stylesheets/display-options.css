@@ -1,0 +1,53 @@
+#display-options {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  align-items: center;
+  margin: 20px 0 20px 20px;
+  padding: 0;
+}
+
+/* Add styles for the label element */
+#display-options label {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 10px 0;
+  padding: 0;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Add styles for the input element */
+#display-options input[type="checkbox"] {
+  margin: 0 10px 0 0;
+  padding: 0;
+  vertical-align: middle;
+  /* Add a custom checkbox style */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Add styles for the checked state of the input element */
+#display-options input[type="checkbox"]:checked {
+  background-color: #333;
+  border-color: white;
+}
+
+/* Add styles for the input element when it is disabled */
+#display-options input[type="checkbox"]:disabled {
+  background-color: #ccc;
+  border-color: white;
+  cursor: not-allowed;
+}
+
+#experience-filter {
+  width: 90%;
+  margin-left: 5px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
