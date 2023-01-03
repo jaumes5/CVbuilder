@@ -1,16 +1,29 @@
 <aside id="info-panel" class="background primary">
   <h2>Info</h2>
   <ul id="info-list">
-
-    <li>
-      <i class="fas fa-phone"></i>
-      <span>Contact number:</span>
-      <span>123-456-7890</span>
-    </li>
+    {% for contact in additional_information.contact_info %}
+      <li>
+        <i class="{{ contact[0] }}"></i>
+        <span class="element-title">{{ contact[1] }}</span>
+        {% autoescape false %}
+          <span>{{ contact[2] }}</span>
+        {% endautoescape %}
+      </li>
+    {% endfor %}
     <li>
       <i class="fas fa-language"></i>
       <span>Languages:</span>
-      <span>English, Spanish</span>
+      <div id="language-chart">
+<!--        <div id="language-bars">-->
+<!--          {% for language in additional_information.languages %}-->
+<!--            <div class="language-bar" data-language="{{ language.language }}" data-level="{{ language.level }}">-->
+<!--              <div class="bar-label">{{ language.language }}</div>-->
+<!--              <div class="bar-value">{{ language.level }}%</div>-->
+<!--            </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+      </div>
     </li>
   </ul>
+  <script src="{{ url_for('static', filename='javascript/language-plot.js') }}"></script>
 </aside>

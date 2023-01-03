@@ -5,9 +5,12 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/timeline.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/display-options.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/side-panel.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/language-plot.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="{{ url_for('static', filename='toggle-menu.js') }}"></script>
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+  <script src="{{ url_for('static', filename='javascript/plotly.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='javascript/toggle-menu.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -15,44 +18,7 @@
     <h1>{{ name }}</h1>
     <h2>{{ job_title }}</h2>
   </header>
-  <nav id="menu">
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-    <h3 id="color-title">Change colors:</h3>
-    <form id="color-form" class="color-form">
-      <button type="button" class="color-button" data-color="default"></button>
-      <button type="button" class="color-button" data-color="red"></button>
-      <button type="button" class="color-button" data-color="green"></button>
-      <button type="button" class="color-button" data-color="blue"></button>
-      <button type="button" class="color-button" data-color="random"></button>
-    </form>
-    <script src="{{ url_for('static', filename='palette.js') }}"></script>
-    <h3 id="display-header">Display Options:</h3>
-    <form id="display-options">
-      <label>
-        <input type="checkbox" name="display-info-panel" checked> Info
-      </label>
-      <label>
-        <input type="checkbox" name="display-about" checked> About Me
-      </label>
-      <label>
-        <input type="checkbox" name="display-experience" checked> Experience
-      </label>
-      <label>
-        <input type="checkbox" name="display-education" checked> Education
-      </label>
-      <label>
-        <input type="checkbox" name="display-skills" checked> Skills
-      </label>
-    </form>
-    <script src="{{ url_for('static', filename='display-options.js') }}"></script>
-    <h3>Experience's filter:</h3>
-    <input type="text" id="experience-filter" placeholder="Use coma ',' for multiple filters">
-  </nav>
+  {% include "nav_menu.html" %}
   <button id="menu-toggle">Toggle Menu</button>
   <div id="shift_div">
     {% include "side_panel.html" %}
@@ -77,7 +43,7 @@
             </li>
           {% endfor %}
         </ul>
-        <script src="{{ url_for('static', filename='filter.js') }}"></script>
+        <script src="{{ url_for('static', filename='javascript/filter.js') }}"></script>
       </section>
       <section id="education">
         <h2 class="primary">Education</h2>

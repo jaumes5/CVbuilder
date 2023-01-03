@@ -55,16 +55,18 @@
   ],
   "additional_information": {
     "languages" : [
-      "Spanish",
-      "French",
-      "English",
-      "Catalan",
-      "Italian"
+      {"language" :"Spanish", "level": "100", "hover":  "First Language"},
+      {"language" :"French", "level": "90", "hover":  "C1-DALF"},
+      {"language" :"English", "level": "75", "hover":  "B2-TOEIC"},
+      {"language" :"Italian", "level": "30", "hover":  "B2-CILS"},
+      {"language" :"Catalan", "level": "30", "hover":  ""}
     ],
-    "contact": {
-      "phone": "(+33) 0770244326",
-      "linkedin": ""
-    },
+    "contact_info": [
+      ["fas fa-phone", "Contact number:", "(+33) 0770244326"],
+      ["fas fa-envelope", "Mail:", "<a href='mailto:jaumes524@gmail.com'>jaumes524@gmail.com</a>"],
+      ["fa-brands fa-linkedin-in", "LinkedIn:", "<a href='https://www.linkedin.com/in/jaime-boixados-martinez'> Click here to see my linkedin profile</a>"],
+      ["fa-brands fa-github", "Github:", "<a href='https://github.com/jaumes5'> Click here to see my GitHub profile</a>"]
+    ],
     "other": [
     ]
   },
