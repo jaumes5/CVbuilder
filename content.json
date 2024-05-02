@@ -3,49 +3,61 @@
   "job_title":"Software Engineer/Data Engineer",
   "experiences": [
     {
-        "title": "Exp1",
+        "title": "Python Engineer",
         "company": "Meritis",
-        "dates": "2016-2018",
-        "description": "jqjqjq"
+        "dates": "Dec 2022 - Present",
+        "description": "Python developer at the SNCF",
+        "technologies": []
     },
     {
-        "title": "Exp2",
-        "company": "Otro",
-        "dates": "2017-2019",
-        "description": "lorem ipsum"
-    },
-    {
-        "title": "Exp1",
+        "title": "Python Engineer",
         "company": "Meritis",
-        "dates": "2016-2018",
-        "description": "jqjqjq"
+        "dates": "Apr 2021 - Sep 2021",
+        "description": "Python developer at Amadeus in the project Traveler ID. Traveler ID digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security etc (source amadeus.com).",
+        "technologies": []
     },
     {
-        "title": "Exp2",
-        "company": "Otro",
-        "dates": "2017-2019",
-        "description": "lorem ipsum"
-    },
-    {
-        "title": "Exp1",
+        "title": "Python Engineer",
         "company": "Meritis",
-        "dates": "2016-2018",
-        "description": "jqjqjq"
+        "dates": "Sep 2021 - Dec 2022",
+        "description": "Python developer at SNCF. The projects revolved around developing multiple APIs for internal use at SNCF.",
+        "technologies": ["Python 3", "Django", "Jenkins", "JavaScript", "Gitlab"]
+    },
+    {
+        "title": "Python Engineer",
+        "company": "Meritis",
+        "dates": "Feb 2021 - Apr 2021",
+        "description": "Python developer at Groupama, working in projects oriented around OCR and similar machine learning subjects.",
+        "technologies": ["Python 3", "Scikit-learn", "Open shift", "JavaScript", "Gitlab"]
+    },
+    {
+        "title": "Big Data Engineer",
+        "company": "Meritis",
+        "dates": "Sep 2018 - Feb 2021",
+        "description": "Schneider Electric: Working on different projects, all of them using AWS.",
+        "technologies": ["Python 3", "Spark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker"]
+    },
+    {
+        "title": "Intern - Data Scientist",
+        "company": "SofiaSquare",
+        "dates": "Mar 2017 - Apr 2017",
+        "description": "During my time at Sofiasquare I worked on a Project of user scoring. The objective was to show the best potential teachers for a particular student.",
+        "technologies": ["Scikit-learn", "Python 3", "R", "RStudio"]
     }
   ],
   "education": [
     {
-      "beg_year": 2010,
-      "end_year": 2014,
-      "title": "Degree in Computer Science",
-      "institution": "Universidad Complutense de Madrid",
-      "description": ""
+      "beg_year": 2016,
+      "end_year": 2018,
+      "title": "Master in Data Science, Data Science",
+      "institution": "EIT DIgital",
+      "description": "• 2017-2018 Université Nice Sophia Antipolis<br/>• 2016-2017 Universidad Politecnica de Madrid"
     },
     {
-      "beg_year": 2014,
-      "end_year": 2015,
-      "title": "Master in Computer Science",
-      "institution": "EIT",
+      "beg_year": 2012,
+      "end_year": 2016,
+      "title": "Degree in Computer Science",
+      "institution": "Universidad Complutense de Madrid",
       "description": ""
     }
   ],
@@ -70,5 +82,5 @@
     "other": [
     ]
   },
-  "about": "Hello! I'm Jaime Boixadós a Software Engineer/Data Engineer."
+  "about": "Young data engineer/software engineer. I am a passionate of new technologies, hackathons and any other kind of coding contest (BattleDev, Condingame...)"
 }

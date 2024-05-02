@@ -14,14 +14,14 @@
       <i class="fas fa-language"></i>
       <span>Languages:</span>
       <div id="language-chart">
-<!--        <div id="language-bars">-->
-<!--          {% for language in additional_information.languages %}-->
-<!--            <div class="language-bar" data-language="{{ language.language }}" data-level="{{ language.level }}">-->
-<!--              <div class="bar-label">{{ language.language }}</div>-->
-<!--              <div class="bar-value">{{ language.level }}%</div>-->
-<!--            </div>-->
-<!--          {% endfor %}-->
-<!--        </div>-->
+        <div id="language-bars">
+          {% for language in additional_information.languages %}
+            <div class="language-bar" data-language="{{ language.language }}" data-level="{{ language.level }}">
+              <div class="bar-label">{{ language.language }}</div>
+              <div class="bar-value">{{ language.level }}%</div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </li>
   </ul>

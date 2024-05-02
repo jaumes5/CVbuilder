@@ -40,6 +40,12 @@
               <p class="quaternary">{{ job.company }}</p>
               <p class="quinary">{{ job.dates }}</p>
               <p class="senary">{{ job.description }}</p>
+              <p class="quaternary">Technologies/Frameworks used:</p>
+              <ul class="technologies">
+                {% for tech in job.technologies %}
+                  <li title="Click to add to filter" onclick="addToFilter('{{ tech }}')">{{ tech }}</li>
+                {% endfor %}
+              </ul>
             </li>
           {% endfor %}
         </ul>
@@ -49,13 +55,15 @@
         <h2 class="primary">Education</h2>
         <ul class="timeline">
           {% for degree in education %}
-            {% if loop.index % 2 == 1%}
+            {% if loop.index % 2 == 1 %}
               <li class="background secondary">
             {% else %}
               <li class="background tertiary">
             {% endif %}
               <h3>{{ degree.title }}</h3>
-              <p>{{ degree.institution }}</p>
+              <p class="quaternary">{{ degree.institution }}</p>
+              <p>{{ degree.beg_year }} - {{ degree.end_year }}</p>
+              <p>{{ degree.description|safe }}</p>
             </li>
           {% endfor %}
         </ul>

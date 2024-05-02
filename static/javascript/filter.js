@@ -19,3 +19,19 @@ filterInput.on('input', () => {
     }
   });
 });
+
+function addToFilter(tech) {
+    // Get the current filter
+    var filter = filterInput.val();
+
+    // Add the technology to the filter
+    if (filter) {
+        filter += ',' + tech;
+    } else {
+        filter = tech;
+    }
+
+    filterInput.val(filter);
+    // Trigger the input event
+    filterInput.trigger('input');
+}

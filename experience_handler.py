@@ -4,7 +4,9 @@ class ExperienceHandler:
         self.flatten_experiences = self.flatten_and_lower()
 
     def apply_filter(self, filter_exp: str, html_format: bool = True):
-        if not filter_exp:
+        if not filter_exp or all(
+            not filter_str.strip() for filter_str in filter_exp.split(",")
+        ):
             return (
                 self.experiences
                 if not html_format
@@ -14,6 +16,8 @@ class ExperienceHandler:
         experiences_present = set()
         for filter_str in filter_exp.split(","):
             filter_str = filter_str.strip().lower()
+            if not filter_str:
+                continue
             for index in ele_to_inspect:
                 if filter_str in self.flatten_experiences[index]:
                     experiences_present.add(index)
@@ -34,11 +38,22 @@ class ExperienceHandler:
 
     @staticmethod
     def cast_to_html(experiences):
+        def get_techs(techs):
+            return "\n".join(
+                f'<li title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </li>'
+                for tech in techs
+            )
+
         return [
             f"""{"<li class='background secondary'>" if pos%2 == 0 else "<li class='background tertiary'>"}
             <h4 class="primary">{ job["title"] }</h4>
             <p class="quaternary">{ job["company"] }</p>
             <p class="quinary">{ job["dates"] }</p>
-            <p class="senary">{ job["description"] }</p>"""
+            <p class="senary">{ job["description"] }</p>
+            <p class="quaternary">Technologies/Frameworks used:</p>
+            <ul class="technologies">
+                {get_techs(job["technologies"])}
+            </ul>
+            </li>"""
             for pos, job in enumerate(experiences)
         ]

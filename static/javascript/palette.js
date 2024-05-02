@@ -1,33 +1,41 @@
 const form = document.querySelector('#color-form');
 const color_picker = {
-	"default": {
-	    "background": "#FFFFFF",
-	    "primary": "#333333",
-	    "secondary": "#fcfcfc",
-	    "tertiary": "#f4f4f4",
-	    "quaternary": "#555",
-	    "quinary": "#666",
-	    "senary": "#555"
-	},
-  	"red": {
-	    "background": "#FFFFFF",
-	    "primary": "#F9564F",
-	    "secondary": "#FDC6C4",
-	    "tertiary": "#FEECEB",
-	    "quaternary": "#c70e00",
-	    "quinary": "#666",
-	    "senary": "#555"
-	},
-	"green": {
-	    "primary": "#297045",
-	    "secondary": "#2E933C",
-	    "tertiary": "#D183C9",
-	},
-	"blue": {
-	    "primary": "#297045",
-	    "secondary": "#2E933C",
-	    "tertiary": "#D183C9",
-	}
+     "default": {
+         "background": "#FFFFFF",
+         "primary": "#333333",
+         "secondary": "#fcfcfc",
+         "tertiary": "#f4f4f4",
+         "quaternary": "#555",
+         "quinary": "#666",
+         "senary": "#555"
+     },
+     "red": {
+         "background": "#FFFFFF",
+         "primary": "#FF0000",
+         "secondary": "#FF7F7F",
+         "tertiary": "#FFBFBF",
+         "quaternary": "#B20000",
+         "quinary": "#660000",
+         "senary": "#330000"
+     },
+     "green": {
+         "background": "#FFFFFF",
+         "primary": "#008000",
+         "secondary": "#66CC66",
+         "tertiary": "#99FF99",
+         "quaternary": "#004D00",
+         "quinary": "#002600",
+         "senary": "#001300"
+     },
+     "blue": {
+         "background": "#FFFFFF",
+         "primary": "#0000FF",
+         "secondary": "#7F7FFF",
+         "tertiary": "#BFBFFF",
+         "quaternary": "#0000B2",
+         "quinary": "#000066",
+         "senary": "#000033"
+     }
 };
 
 const getRanHex = size => {
