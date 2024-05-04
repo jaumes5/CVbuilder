@@ -1,6 +1,8 @@
 .timeline {
   list-style: none;
-  margin: 0;
+  border-left: 3px solid #333;
+  padding-left: 12px;
+  margin: 0 0 0 22px;
 }
 
 .timeline li {
@@ -12,16 +14,21 @@
   padding: 20px;
 }
 
-.timeline li:before {
-  content: '';
+ul.timeline > li::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: -20px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #333;
+  left: -24px;
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  background-color: #333;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF; /* Replace #FFFFFF with the color of your background */
+  /*box-shadow: 0 0 10px #333;*/
+}
+
+#education ul.timeline > li::after {
+  top: 38px;
 }
 
 .timeline li h4 {
@@ -41,26 +48,27 @@
   color: #555;
 }
 
+.timeline li p.quinary {
+  color: #666;
+}
+
+.timeline li p.senary {
+  color: #555;
+}
+
 .timeline li p:nth-of-type(2) {
   font-style: italic;
   color: #666;
 }
 
-.timeline li:nth-child(odd) {
+.timeline li.background.secondary {
+  background-color: #c9c9c9;
+}
+
+.timeline li.background.tertiary {
   background-color: #fcfcfc;
 }
 
-.timeline li:nth-child(odd):before {
-  border-left-color: #00b8d4;
-}
-
-.timeline li:nth-child(even) {
-  background-color: #f4f4f4;
-}
-
-.timeline li:nth-child(even):before {
-  border-left-color: #0052cc;
-}
 .timeline li ul.technologies {
   list-style: none;
   margin: 0;
@@ -72,7 +80,7 @@
   margin: 5px;
   padding: 5px 10px;
   /*background-color: #f5f5f5;*/
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 0.8em;
   color: #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

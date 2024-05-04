@@ -6,15 +6,15 @@
         "title": "Python Engineer",
         "company": "Meritis",
         "dates": "Dec 2022 - Present",
-        "description": "Python developer at the SNCF",
-        "technologies": []
+        "description": "Python developer at the SNCF. Working in a project for helping the SNCF anticipate and to plan future construction and maintenance works in all the French railway network.",
+        "technologies": ["Python 3", "FastAPI", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab"]
     },
     {
         "title": "Python Engineer",
         "company": "Meritis",
         "dates": "Apr 2021 - Sep 2021",
         "description": "Python developer at Amadeus in the project Traveler ID. Traveler ID digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security etc (source amadeus.com).",
-        "technologies": []
+        "technologies": ["Python 3", "FastAPI", "Jenkins", "BitBucket"]
     },
     {
         "title": "Python Engineer",
@@ -35,7 +35,7 @@
         "company": "Meritis",
         "dates": "Sep 2018 - Feb 2021",
         "description": "Schneider Electric: Working on different projects, all of them using AWS.",
-        "technologies": ["Python 3", "Spark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker"]
+        "technologies": ["Python 3", "Python 2", "Spark/PySpark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker"]
     },
     {
         "title": "Intern - Data Scientist",
@@ -61,26 +61,47 @@
       "description": ""
     }
   ],
-  "skills" : [
-    "Python",
-    "Spark"
-  ],
+  "skills" : {
+    "Languages" : [
+      {"name": "Python", "level": 5},
+      {"name": "Pyspark", "level": 3},
+      {"name": "SQL", "level": 4},
+      {"name": "HTML", "level": 2},
+      {"name": "CSS", "level": 2},
+      {"name": "Java", "level": 2},
+      {"name": "JavaScript", "level": 2}
+    ],
+    "Frameworks" : [
+      {"name": "FastApi", "level": 4},
+      {"name": "Airflow", "level": 3},
+      {"name": "Pydantic", "level": 4},
+      {"name": "Flask", "level": 2},
+      {"name": "Django", "level": 1}
+    ],
+    "Others" : [
+      {"name": "Git"},
+      {"name": "AWS"},
+      {"name": "Docker"},
+      {"name": "Jenkins"},
+      {"name": "Kubernetes"}
+    ]
+  },
   "additional_information": {
     "languages" : [
       {"language" :"Spanish", "level": "100", "hover":  "First Language"},
       {"language" :"French", "level": "90", "hover":  "C1-DALF"},
-      {"language" :"English", "level": "75", "hover":  "B2-TOEIC"},
-      {"language" :"Italian", "level": "30", "hover":  "B2-CILS"},
-      {"language" :"Catalan", "level": "30", "hover":  ""}
+      {"language" :"English", "level": "70", "hover":  "B2-TOEIC"},
+      {"language" :"Italian", "level": "30", "hover":  "B2-CILS"}
     ],
     "contact_info": [
       ["fas fa-phone", "Contact number:", "(+33) 0770244326"],
       ["fas fa-envelope", "Mail:", "<a href='mailto:jaumes524@gmail.com'>jaumes524@gmail.com</a>"],
-      ["fa-brands fa-linkedin-in", "LinkedIn:", "<a href='https://www.linkedin.com/in/jaime-boixados-martinez'> Click here to see my linkedin profile</a>"],
-      ["fa-brands fa-github", "Github:", "<a href='https://github.com/jaumes5'> Click here to see my GitHub profile</a>"]
+      ["fa-brands fa-linkedin-in", "LinkedIn:", "<a href='https://www.linkedin.com/in/jaime-boixados-martinez'>Jaime Boixadós Martínez</a>"],
+      ["fa-brands fa-github", "Github:", "<a href='https://github.com/jaumes5'>jaumes5</a>"],
+      ["fa-solid fa-terminal", "Codingame:", "<a href='https://www.codingame.com/profile/a6976d75e11cb6737fbbd8dc6e6fe1736428652'>jaumes5</a>"]
     ],
     "other": [
     ]
   },
-  "about": "Young data engineer/software engineer. I am a passionate of new technologies, hackathons and any other kind of coding contest (BattleDev, Condingame...)"
+  "about": "Young software engineer/data engineer. I am a passionate of new technologies, hackathons and any other kind of coding contest (BattleDev, Condingame...). I like to do rock climbing and work on my home automation during my free time"
 }

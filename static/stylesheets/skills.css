@@ -1,0 +1,36 @@
+#skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skills-category {
+  font-weight: bold;
+}
+
+.skills {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.skill-level {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-level li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 1px solid black;
+}
+
+.skill-level .filled {
+  background-color: #333;
+}
+
+.skill-level .empty {
+  background-color: #fff;
+}

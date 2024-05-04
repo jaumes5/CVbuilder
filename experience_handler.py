@@ -38,10 +38,10 @@ class ExperienceHandler:
 
     @staticmethod
     def cast_to_html(experiences):
-        def get_techs(techs):
+        def get_techs(techs, parent_idx: int):
             return "\n".join(
-                f'<li title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </li>'
-                for tech in techs
+                f"""<li {"class='background secondary'" if (pos + parent_idx) %2 == 1 else "class='background tertiary'"} title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </li>"""
+                for pos, tech in enumerate(techs)
             )
 
         return [
@@ -52,7 +52,7 @@ class ExperienceHandler:
             <p class="senary">{ job["description"] }</p>
             <p class="quaternary">Technologies/Frameworks used:</p>
             <ul class="technologies">
-                {get_techs(job["technologies"])}
+                {get_techs(job["technologies"], pos)}
             </ul>
             </li>"""
             for pos, job in enumerate(experiences)

@@ -3,40 +3,45 @@ const color_picker = {
      "default": {
          "background": "#FFFFFF",
          "primary": "#333333",
-         "secondary": "#fcfcfc",
-         "tertiary": "#f4f4f4",
+         "secondary": "#c9c9c9",
+         "tertiary": "#fcfcfc",
          "quaternary": "#555",
          "quinary": "#666",
-         "senary": "#555"
+         "senary": "#555",
+         "contrast": "#333333"
      },
-     "red": {
+     "orange": {
          "background": "#FFFFFF",
-         "primary": "#FF0000",
-         "secondary": "#FF7F7F",
-         "tertiary": "#FFBFBF",
-         "quaternary": "#B20000",
-         "quinary": "#660000",
-         "senary": "#330000"
+         "primary": "#29292b",
+         "secondary": "#fe9d01",
+         "tertiary": "#ffb407",
+         "quaternary": "#29292b",
+         "quinary": "#464649",
+         "senary": "#28282A",
+         "contrast": "#fe9d01"
      },
      "green": {
          "background": "#FFFFFF",
-         "primary": "#008000",
-         "secondary": "#66CC66",
+         "primary": "#29343a",
+         "secondary": "#01a64a",
          "tertiary": "#99FF99",
-         "quaternary": "#004D00",
-         "quinary": "#002600",
-         "senary": "#001300"
+         "quaternary": "#222B30",
+         "quinary": "#192024",
+         "senary": "#001300",
+         "contrast": "#01a64a"
      },
      "blue": {
          "background": "#FFFFFF",
-         "primary": "#0000FF",
-         "secondary": "#7F7FFF",
-         "tertiary": "#BFBFFF",
-         "quaternary": "#0000B2",
+         "primary": "#292321",
+         "secondary": "#4ec8ff",
+         "tertiary": "#85D8FF",
+         "quaternary": "#221D1B",
          "quinary": "#000066",
-         "senary": "#000033"
+         "senary": "#000033",
+         "contrast": "#4ec8ff"
      }
 };
+let lastPressedButton = null;
 
 const getRanHex = size => {
   let result = [];
@@ -50,14 +55,15 @@ const getRanHex = size => {
 form.addEventListener('click', (event) => {
   const button = event.target;
   if (button.tagName === 'BUTTON') {
-    const color = button.getAttribute('data-color');
+    lastPressedButton = button;
+    color = button.getAttribute('data-color');
     if (color == "random"){
         document.body.style.backgroundColor = getRanHex(6);
     }
     else{
         document.body.style.backgroundColor = color_picker[color]["background"];
     }
-    const palette = ["primary", "secondary", "tertiary", "quaternary", "quinary", "senary"];
+    const palette = ["primary", "secondary", "tertiary", "quaternary", "quinary", "senary", "contrast"];
     for(pal of palette){
       if (color == "random"){
         var style_color = getRanHex(6);

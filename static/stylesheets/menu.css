@@ -110,20 +110,48 @@ button.color-button[data-color="default"]::before {
   background-color: #333;
 }
 
-button.color-button[data-color="red"]::before {
-  background-color: #ff5252;
+button.color-button[data-color="orange"]::before {
+  background-color: #fe9d01;
 }
 
 button.color-button[data-color="green"]::before {
-  background-color: #4caf50;
+  background-color: #01a64a;
 }
 
 button.color-button[data-color="blue"]::before {
-  background-color: #2196f3;
+  background-color: #4ec8ff;
 }
 
 button.color-button[data-color="random"]::before {
   background-color: white;
   content: '?';
   font-size: 27px;
+}
+
+#downloadButton {
+  display: inline-block;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 20px 2px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#downloadButton:hover {background-color: #555}
+
+#downloadButton:active {
+  background-color: #555;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.horizontal-center {
+  text-align: center;
 }

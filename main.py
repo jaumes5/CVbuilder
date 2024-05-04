@@ -26,7 +26,7 @@ def create_app():
     global exp_handler
     user_info = json_reader()
     exp_handler = ExperienceHandler(user_info["experiences"])
-    app.debug = True
+    app.debug = False
     app.run()  # go to http://localhost:5000/ to view the page.
 
 

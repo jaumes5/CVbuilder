@@ -16,6 +16,9 @@ filterInput.on('input', () => {
       for (const experience of experiences) {
         experienceList.append(experience);
       }
+      if (lastPressedButton) {
+        lastPressedButton.click();
+      }
     }
   });
 });

@@ -8,12 +8,11 @@
   <h3 id="color-title">Change colors:</h3>
   <form id="color-form" class="color-form">
     <button type="button" class="color-button" data-color="default"></button>
-    <button type="button" class="color-button" data-color="red"></button>
+    <button type="button" class="color-button" data-color="orange"></button>
     <button type="button" class="color-button" data-color="green"></button>
     <button type="button" class="color-button" data-color="blue"></button>
     <button type="button" class="color-button" data-color="random"></button>
   </form>
-  <script src="{{ url_for('static', filename='javascript/palette.js') }}"></script>
   <h3 id="display-header">Display Options:</h3>
   <form id="display-options">
     <label>
@@ -34,5 +33,9 @@
   </form>
   <script src="{{ url_for('static', filename='javascript/display-options.js') }}"></script>
   <h3>Experience's filter:</h3>
-  <input type="text" id="experience-filter" placeholder="Use coma ',' for multiple filters">
+  <input type="text" id="experience-filter" class="experience-filter" placeholder="Use coma ',' for multiple filters">
+  <div class="horizontal-center">
+      <button id="downloadButton">Download PDF</button>
+  </div>
+  <script src="{{ url_for('static', filename='javascript/palette.js') }}"></script>
 </nav>

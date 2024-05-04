@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: #333333;
   color: white;
+  min-height: calc(100vh - 145px);
 }
 
 #info-list {
@@ -36,4 +37,12 @@
 
 .element-title{
   font-weight: bold;
+}
+
+h2 > i{
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 9px;
+  margin-left: 7px;
 }

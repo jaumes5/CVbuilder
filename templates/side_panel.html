@@ -13,17 +13,16 @@
     <li>
       <i class="fas fa-language"></i>
       <span>Languages:</span>
-      <div id="language-chart">
-        <div id="language-bars">
+        <ul id="language-list">
           {% for language in additional_information.languages %}
-            <div class="language-bar" data-language="{{ language.language }}" data-level="{{ language.level }}">
-              <div class="bar-label">{{ language.language }}</div>
-              <div class="bar-value">{{ language.level }}%</div>
-            </div>
+            <li>
+              <span class="language-label">{{ language.language }}</span>
+              <div class="language-progress">
+                <div class="progress-bar background secondary" style="width: {{ language.level }}%" title="{{ language.hover }}"></div>
+              </div>
+            </li>
           {% endfor %}
-        </div>
-      </div>
+        </ul>
     </li>
   </ul>
-  <script src="{{ url_for('static', filename='javascript/language-plot.js') }}"></script>
 </aside>
