@@ -91,7 +91,7 @@
                     {% if 'level' in skill %}
                       <ul class="skill-level">
                         {% for i in range(5) %}
-                          <li class="{{ 'filled background secondary' if i < skill.level else 'empty' }}"></li>
+A                          <li class="{{ 'filled background contrast' if i < skill.level else 'empty' }}"></li>
                         {% endfor %}
                       </ul>
                     {% endif %}

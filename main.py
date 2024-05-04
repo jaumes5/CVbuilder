@@ -11,6 +11,13 @@ user_info: dict = {}
 exp_handler: Optional[ExperienceHandler] = None
 
 
+@app.route("/health")
+def health_check():
+    resp = jsonify(health="healthy")
+    resp.status_code = 200
+    return resp
+
+
 @app.route("/")
 def index():
     return render_template("index.html", **user_info)
