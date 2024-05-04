@@ -27,7 +27,7 @@ def create_app():
     user_info = json_reader()
     exp_handler = ExperienceHandler(user_info["experiences"])
     app.debug = False
-    app.run()  # go to http://localhost:5000/ to view the page.
+    app.run(host="0.0.0.0", port=3000)  # go to http://localhost:5000/ to view the page.
 
 
 if __name__ == "__main__":
