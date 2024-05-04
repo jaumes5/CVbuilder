@@ -4,44 +4,44 @@
   "experiences": [
     {
         "title": "Python Engineer",
-        "company": "Meritis",
+        "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Dec 2022 - Present",
-        "description": "Python developer at the SNCF. Working in a project for helping the SNCF anticipate and to plan future construction and maintenance works in all the French railway network.",
+        "description": "Python developer at the <a href='https://www.sncf-reseau.com'>SNCF</a>. Working in a project for helping the <a href='https://www.sncf-reseau.com'>SNCF</a> anticipate and to plan future construction and maintenance works in all the French railway network.",
         "technologies": ["Python 3", "FastAPI", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab"]
     },
     {
         "title": "Python Engineer",
-        "company": "Meritis",
-        "dates": "Apr 2021 - Sep 2021",
-        "description": "Python developer at Amadeus in the project Traveler ID. Traveler ID digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security etc (source amadeus.com).",
+        "company": "<a href='https://meritis.fr'>Meritis</a>",
+        "dates": "Sep 2021 - Dec 2022",
+        "description": "Python developer at <a href='https://amadeus.com'>Amadeus</a> in the project <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a>. <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a> digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security etc (source amadeus.com).",
         "technologies": ["Python 3", "FastAPI", "Jenkins", "BitBucket"]
     },
     {
         "title": "Python Engineer",
-        "company": "Meritis",
-        "dates": "Sep 2021 - Dec 2022",
-        "description": "Python developer at SNCF. The projects revolved around developing multiple APIs for internal use at SNCF.",
+        "company": "<a href='https://meritis.fr'>Meritis</a>",
+        "dates": "Apr 2021 - Sep 2021",
+        "description": "Python developer at <a href='https://www.sncf-reseau.com'>SNCF</a>. The projects revolved around developing multiple APIs for internal use at SNCF.",
         "technologies": ["Python 3", "Django", "Jenkins", "JavaScript", "Gitlab"]
     },
     {
         "title": "Python Engineer",
-        "company": "Meritis",
+        "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Feb 2021 - Apr 2021",
-        "description": "Python developer at Groupama, working in projects oriented around OCR and similar machine learning subjects.",
+        "description": "Python developer at <a href='https://www.groupama.fr'>Groupama</a>, working in projects oriented around OCR and similar machine learning subjects.",
         "technologies": ["Python 3", "Scikit-learn", "Open shift", "JavaScript", "Gitlab"]
     },
     {
         "title": "Big Data Engineer",
-        "company": "Meritis",
+        "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Sep 2018 - Feb 2021",
-        "description": "Schneider Electric: Working on different projects, all of them using AWS.",
+        "description": "<a href='https://www.se.com'>Schneider Electric</a>: Working on different projects, all of them using AWS.",
         "technologies": ["Python 3", "Python 2", "Spark/PySpark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker"]
     },
     {
         "title": "Intern - Data Scientist",
         "company": "SofiaSquare",
         "dates": "Mar 2017 - Apr 2017",
-        "description": "During my time at Sofiasquare I worked on a Project of user scoring. The objective was to show the best potential teachers for a particular student.",
+        "description": "During my time at <b>Sofiasquare</b> I worked on a project of user scoring. The objective was to show the best potential teachers for a particular student.",
         "technologies": ["Scikit-learn", "Python 3", "R", "RStudio"]
     }
   ],
@@ -103,5 +103,5 @@
     "other": [
     ]
   },
-  "about": "Young software engineer/data engineer. I am a passionate of new technologies, hackathons and any other kind of coding contest (BattleDev, Condingame...). I like to do rock climbing and work on my home automation during my free time"
+  "about": "Young software engineer/data engineer. I am a passionate of new technologies, hackathons and any other kind of coding contest (BattleDev, Condingame...). I like to do rock climbing and work on my home automation during my free time."
 }

@@ -13,18 +13,18 @@ class ExperienceHandler:
                 else self.cast_to_html(self.experiences)
             )
         ele_to_inspect = set(range(len(self.experiences)))
-        experiences_present = set()
         for filter_str in filter_exp.split(","):
             filter_str = filter_str.strip().lower()
             if not filter_str:
                 continue
+            tmp_set = set()
             for index in ele_to_inspect:
                 if filter_str in self.flatten_experiences[index]:
-                    experiences_present.add(index)
-            ele_to_inspect -= experiences_present
+                    tmp_set.add(index)
+            ele_to_inspect = ele_to_inspect.intersection(tmp_set)
             if not ele_to_inspect:
                 break
-        res = [self.experiences[i] for i in sorted(experiences_present)]
+        res = [self.experiences[i] for i in sorted(ele_to_inspect)]
         return res if not html_format else self.cast_to_html(res)
 
     def flatten_and_lower(self) -> list[str]:

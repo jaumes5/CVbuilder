@@ -43,9 +43,9 @@
               <li class="background tertiary">
             {% endif %}
               <h4 class="primary">{{ job.title }}</h4>
-              <p class="quaternary">{{ job.company }}</p>
+              <p class="quaternary">{{ job.company|safe }}</p>
               <p class="quinary">{{ job.dates }}</p>
-              <p class="senary">{{ job.description }}</p>
+              <p class="senary">{{ job.description|safe }}</p>
               <p class="quaternary">Technologies/Frameworks used:</p>
               <ul class="technologies">
                 {% for tech in job.technologies %}
