@@ -1,28 +1,30 @@
 <aside id="info-panel" class="background primary">
-  <h2>Info</h2>
-  <ul id="info-list">
-    {% for contact in additional_information.contact_info %}
-      <li>
-        <i class="{{ contact[0] }}"></i>
-        <span class="element-title">{{ contact[1] }}</span>
-        {% autoescape false %}
-          <span>{{ contact[2] }}</span>
-        {% endautoescape %}
-      </li>
-    {% endfor %}
-    <li>
-      <i class="fas fa-language"></i>
-      <span>Languages:</span>
-        <ul id="language-list">
-          {% for language in additional_information.languages %}
-            <li>
-              <span class="language-label">{{ language.language }}</span>
-              <div class="language-progress">
-                <div class="progress-bar background secondary" style="width: {{ language.level }}%" title="{{ language.hover }}"></div>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-    </li>
-  </ul>
+  <div id="sticky-div">
+      <h2>Info</h2>
+      <ul id="info-list">
+        {% for contact in additional_information.contact_info %}
+          <li>
+            <i class="{{ contact[0] }}"></i>
+            <span class="element-title">{{ contact[1] }}</span>
+            {% autoescape false %}
+              <span>{{ contact[2] }}</span>
+            {% endautoescape %}
+          </li>
+        {% endfor %}
+        <li>
+          <i class="fas fa-language"></i>
+          <span>Languages:</span>
+            <ul id="language-list">
+              {% for language in additional_information.languages %}
+                <li>
+                  <span class="language-label">{{ language.language }} ({{ language.hover }})</span>
+                  <div class="language-progress">
+                    <div class="progress-bar background secondary" style="width: {{ language.level }}%" title="{{ language.hover }}"></div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+        </li>
+      </ul>
+  </div>
 </aside>
