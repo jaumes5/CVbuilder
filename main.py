@@ -1,3 +1,4 @@
+import argparse
 from typing import Optional
 
 from experience_handler import ExperienceHandler
@@ -28,14 +29,31 @@ def experience_filter():
     return jsonify(exp_handler.apply_filter(request.form["filter"]))
 
 
-def create_app():
+def arg_parser():
+    parser = argparse.ArgumentParser(description="Run the Flask app")
+    parser.add_argument(
+        "-p",
+        "--port",
+        type=int,
+        default=3000,
+        help="Port to run the app on (default 3000)",
+    )
+    return parser.parse_args()
+
+
+def create_app(port: int = 3000):
     global user_info
     global exp_handler
     user_info = json_reader()
     exp_handler = ExperienceHandler(user_info["experiences"])
     app.debug = False
-    app.run(host="0.0.0.0", port=3000)
+    app.run(host="0.0.0.0", port=port)
+
+
+def main():
+    args = arg_parser()
+    create_app(args.port)
 
 
 if __name__ == "__main__":
-    create_app()
+    main()
