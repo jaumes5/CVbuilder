@@ -1,4 +1,5 @@
 import argparse
+import logging
 from typing import Optional
 
 from experience_handler import ExperienceHandler
@@ -44,6 +45,7 @@ def arg_parser():
 def create_app(port: int = 3000):
     global user_info
     global exp_handler
+    logging.info(f"Starting the Flask app in port {port}")
     user_info = json_reader()
     exp_handler = ExperienceHandler(user_info["experiences"])
     app.debug = False
