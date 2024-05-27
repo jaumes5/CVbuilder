@@ -1,6 +1,6 @@
 import argparse
 
-from backend.router import create_app
+from router import create_app
 
 
 def arg_parser():
