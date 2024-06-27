@@ -1,0 +1,68 @@
+#easter-egg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 70px;
+  background: rgba(213, 213, 213, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 2s ease; /* Only transition transform here */
+}
+
+#easter-egg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(252, 176, 69, 1), rgba(253, 29, 29, 1), rgba(131, 58, 180, 1));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 2s ease; /* Transition opacity here */
+}
+
+#easter-egg:hover {
+  transform: scale(1.2);
+}
+
+#easter-egg:hover:before {
+  opacity: 1; /* On hover, show the gradient */
+}
+
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  z-index: 1000;
+  width: 300px; /* Fixed width */
+  text-align: center; /* Centered text */
+}
+
+#custom-alert-message {
+  margin-bottom: 20px; /* Space between the message and the button */
+}
+
+.custom-alert.hidden {
+  display: none;
+}
+
+#custom-alert-close {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+}
+
+#custom-alert-close:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}

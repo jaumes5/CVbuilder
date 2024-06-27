@@ -8,10 +8,13 @@ downloadButton.addEventListener('click', () => {
   const navMenu = content.querySelector('#menu');
   const main = content.querySelector('#shift_div');
   const toggleButton = content.querySelector('#menu-toggle');
+  const easter_egg = content.querySelector('#easter-egg');
+
 
   // Hide the navigation menu
   navMenu.style.display = 'none';
   toggleButton.style.display = 'none';
+  easter_egg.style.display = 'none';
   main.style.marginLeft = '0';
 
 
