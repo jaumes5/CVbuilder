@@ -1,40 +1,97 @@
-// Get the input text field and the list of experiences
 const filterInput = $('#experience-filter');
 const experienceList = $('#experience-list');
+const selectedExperiences = $('#selected-experiences');
+let timeoutId = null;
 
-// Add an event listener for the input event
-filterInput.on('input', () => {
-  // Get the filter text
-  const filterText = filterInput.val().toLowerCase();
+filterInput.on('keypress', function(e) {
+  if (e.which === 13) {
+    e.preventDefault();
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    $('.reminder-message').remove();
+
+    const experience = filterInput.val().trim();
+    if (experience) {
+      const listItem = $('<li>').text(experience);
+      const removeButton = $('<button>').html('&times;').addClass('remove-button').on('click', function() {
+        listItem.remove();
+        sendAjaxRequest();
+      });
+      listItem.append(removeButton);
+      selectedExperiences.append(listItem);
+      filterInput.val('');
+      sendAjaxRequest();
+    }
+  }
+});
+
+filterInput.on('input', function() {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+
+  const currentValue = filterInput.val().trim();
+
+  if (currentValue) {
+    timeoutId = setTimeout(function() {
+      const message = $('<div>').text('Don\'t forget to press Enter!').addClass('reminder-message').hide();
+
+      message.css({
+        position: 'absolute',
+        top: filterInput.offset().top + filterInput.outerHeight(),
+        left: filterInput.offset().left,
+        backgroundColor: '#ff4b5c',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px',
+        zIndex: 1000
+      });
+
+      $('body').append(message);
+      message.fadeIn(500);
+
+      setTimeout(function() {
+        message.fadeOut(500, function() {
+          message.remove();
+        });
+      }, 4000);  // Remove the message after 4 seconds
+    }, 5000);  // Append the message after 5 seconds
+  }
+});
+
+function sendAjaxRequest() {
+  // Get the updated list of experiences
+  const updatedExperiences = selectedExperiences.children().map(function() {
+    return $(this).contents().get(0).nodeValue.trim();
+  }).get();
+
   // Send an AJAX request to the server
   $.ajax({
     url: '/filter',
     type: 'POST',
-    data: { filter: filterText },
-    success: (experiences) => {
+    contentType: 'application/json', // specify the content type
+    data: JSON.stringify({ filter: updatedExperiences }), // stringify the data
+    success: function(response) {
       experienceList.empty();
-      for (const experience of experiences) {
+
+      response.forEach(function(experience) {
         experienceList.append(experience);
-      }
-      if (lastPressedButton) {
-        lastPressedButton.click();
-      }
+      });
     }
   });
-});
+}
 
 function addToFilter(tech) {
-    // Get the current filter
-    var filter = filterInput.val();
+    const listItem = $('<li>').text(tech);
+    const removeButton = $('<button>').html('&times;').addClass('remove-button').on('click', function() {
+        listItem.remove();
+        sendAjaxRequest();
+    });
 
-    // Add the technology to the filter
-    if (filter) {
-        filter += ',' + tech;
-    } else {
-        filter = tech;
-    }
 
-    filterInput.val(filter);
-    // Trigger the input event
-    filterInput.trigger('input');
+    listItem.append(removeButton);
+    selectedExperiences.append(listItem);
+    sendAjaxRequest();
 }

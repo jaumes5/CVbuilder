@@ -4,16 +4,14 @@ class ExperienceHandler:
         self.flatten_experiences = self.flatten_and_lower()
 
     def apply_filter(self, filter_exp: str, html_format: bool = True):
-        if not filter_exp or all(
-            not filter_str.strip() for filter_str in filter_exp.split(",")
-        ):
+        if not filter_exp or all(not filter_str.strip() for filter_str in filter_exp):
             return (
                 self.experiences
                 if not html_format
                 else self.cast_to_html(self.experiences)
             )
         ele_to_inspect = set(range(len(self.experiences)))
-        for filter_str in filter_exp.split(","):
+        for filter_str in filter_exp:
             filter_str = filter_str.strip().lower()
             if not filter_str:
                 continue

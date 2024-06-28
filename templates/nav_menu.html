@@ -33,7 +33,8 @@
   </form>
   <script src="{{ url_for('static', filename='javascript/display-options.js') }}"></script>
   <h3>Experience's filter:</h3>
-  <input type="text" id="experience-filter" class="experience-filter" placeholder="Use coma ',' for multiple filters">
+  <input type="text" id="experience-filter" class="experience-filter" placeholder="Click enter to add a filter">
+  <div id="selected-experiences"></div>
   <div class="horizontal-center">
       <button id="downloadButton">Download PDF</button>
   </div>

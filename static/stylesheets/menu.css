@@ -155,3 +155,33 @@ button.color-button[data-color="random"]::before {
 .horizontal-center {
   text-align: center;
 }
+
+#selected-experiences li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px auto;
+  background-color: #494747;
+  border-radius: 11px;
+  width: 80%;
+}
+
+/* Style for the remove button */
+.remove-button {
+  background-color: #ff4b5c;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Hover effect for the remove button */
+.remove-button:hover {
+  background-color: #ff1e3d;
+}

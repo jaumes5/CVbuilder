@@ -26,7 +26,7 @@ def index():
 
 @app.route("/filter", methods=["POST"])
 def experience_filter():
-    return jsonify(exp_handler.apply_filter(request.form["filter"]))
+    return jsonify(exp_handler.apply_filter(request.get_json()["filter"]))
 
 
 def create_app(port: int = 3000):
