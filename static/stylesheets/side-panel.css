@@ -1,7 +1,6 @@
 #info-panel {
   width: 300px;
   padding: 20px;
-  background-color: #333333;
   color: white;
   min-height: calc(100vh - 145px);
 }

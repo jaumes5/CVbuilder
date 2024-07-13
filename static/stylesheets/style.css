@@ -1,3 +1,14 @@
+:root {
+  --background-color: #FFFFFF;
+  --primary-color: #333333;
+  --secondary-color: #c9c9c9;
+  --tertiary-color: #fcfcfc;
+  --quaternary-color: #555;
+  --quinary-color: #666;
+  --senary-color: #555;
+  --contrast-color: #333333;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -13,7 +24,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333;
   color: white;
   padding: 20px;
   text-align: center;
@@ -35,9 +45,68 @@ header h2 {
 main h2{
   width: 226px;
   height: 100%;
-  background-color: #c9c9c9;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   margin-left: -20px;
   padding-left: 20px;
+}
+
+.background {
+  background-color: var(--background-color);
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.tertiary {
+  color: var(--tertiary-color);
+}
+
+.quaternary {
+  color: var(--quaternary-color);
+}
+
+.quinary {
+  color: var(--quinary-color);
+}
+
+.senary {
+  color: var(--senary-color);
+}
+
+.contrast {
+  color: var(--contrast-color);
+}
+
+.background-primary {
+  background-color: var(--primary-color);
+}
+
+.background-secondary {
+  background-color: var(--secondary-color);
+}
+
+.background-tertiary {
+  background-color: var(--tertiary-color);
+}
+
+.background-quaternary {
+  background-color: var(--quaternary-color);
+}
+
+.background-quinary {
+  background-color: var(--quinary-color);
+}
+
+.background-senary {
+  background-color: var(--senary-color);
+}
+
+.background-contrast {
+  background-color: var(--contrast-color);
 }

@@ -8,8 +8,7 @@
 .timeline li {
   position: relative;
   margin: 20px 0;
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 20px;
 }
@@ -33,7 +32,7 @@ ul.timeline > li::after {
   height: 14px;
   background-color: #333;
   border-radius: 50%;
-  border: 3px solid #FFFFFF; /* Replace #FFFFFF with the color of your background */
+  border: 3px solid var(--background-color); /* Replace #FFFFFF with the color of your background */
   /*box-shadow: 0 0 10px #333;*/
 }
 
@@ -44,39 +43,19 @@ ul.timeline > li::after {
 .timeline li h4 {
   margin: 0;
   font-size: 1.5em;
-  color: #333;
 }
 
 .timeline li p {
   margin: 0;
   font-size: 1em;
-  color: #888;
 }
 
 .timeline li p.quaternary {
   font-weight: bold;
-  color: #555;
-}
-
-.timeline li p.quinary {
-  color: #666;
-}
-
-.timeline li p.senary {
-  color: #555;
 }
 
 .timeline li p:nth-of-type(2) {
   font-style: italic;
-  color: #666;
-}
-
-.timeline li.background.secondary {
-  background-color: #c9c9c9;
-}
-
-.timeline li.background.tertiary {
-  background-color: #fcfcfc;
 }
 
 .timeline li ul.technologies {
@@ -93,7 +72,7 @@ ul.timeline > li::after {
   border-radius: 10px;
   font-size: 0.8em;
   color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
 

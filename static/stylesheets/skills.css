@@ -27,10 +27,6 @@
   border: 1px solid black;
 }
 
-.skill-level .filled {
-  background-color: #333;
-}
-
 .skill-level .empty {
   background-color: #fff;
 }

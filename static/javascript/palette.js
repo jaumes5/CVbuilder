@@ -56,30 +56,18 @@ form.addEventListener('click', (event) => {
   const button = event.target;
   if (button.tagName === 'BUTTON') {
     lastPressedButton = button;
-    color = button.getAttribute('data-color');
-    if (color == "random"){
-        document.body.style.backgroundColor = getRanHex(6);
-    }
-    else{
-        document.body.style.backgroundColor = color_picker[color]["background"];
+    const color = button.getAttribute('data-color');
+    if (color == "random") {
+      document.documentElement.style.setProperty('--background-color', getRanHex(6));
+      // Set other properties similarly
+    } else {
+      document.documentElement.style.setProperty('--background-color', color_picker[color]["background"]);
+      // Update other properties similarly
     }
     const palette = ["primary", "secondary", "tertiary", "quaternary", "quinary", "senary", "contrast"];
-    for(pal of palette){
-      if (color == "random"){
-        var style_color = getRanHex(6);
-      }
-      else{
-        var style_color = color_picker[color][pal];
-      }
-      document.querySelectorAll("." + pal).forEach((element) => {
-        if (element.classList.contains('background')) {
-          element.style.backgroundColor = style_color;
-          //element.before.style.borderLeftColor = color_picker[color][pal];
-        }
-        else{
-          element.style.color = style_color;
-        }
-      });
+    for (const pal of palette) {
+      const styleColor = color == "random" ? getRanHex(6) : color_picker[color][pal];
+      document.documentElement.style.setProperty(`--${pal}-color`, styleColor);
     }
   }
 });
