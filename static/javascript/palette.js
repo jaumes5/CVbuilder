@@ -1,3 +1,5 @@
+import { toggleEasterEgg } from './easter.js';
+
 const form = document.querySelector('#color-form');
 const color_picker = {
      "default": {
@@ -54,6 +56,7 @@ const getRanHex = size => {
 
 form.addEventListener('click', (event) => {
   const button = event.target;
+  toggleEasterEgg()
   if (button.tagName === 'BUTTON') {
     lastPressedButton = button;
     const color = button.getAttribute('data-color');

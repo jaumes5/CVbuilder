@@ -1,3 +1,5 @@
+import { toggleEasterEgg } from './easter.js';
+
 const filterInput = $('#experience-filter');
 const experienceList = $('#experience-list');
 const selectedExperiences = $('#selected-experiences');
@@ -63,6 +65,7 @@ filterInput.on('input', function() {
 
 function sendAjaxRequest() {
   // Get the updated list of experiences
+  toggleEasterEgg()
   const updatedExperiences = selectedExperiences.children().map(function() {
     return $(this).contents().get(0).nodeValue.trim();
   }).get();
@@ -95,3 +98,5 @@ function addToFilter(tech) {
     selectedExperiences.append(listItem);
     sendAjaxRequest();
 }
+
+window.addToFilter = addToFilter;
