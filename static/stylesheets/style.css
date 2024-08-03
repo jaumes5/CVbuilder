@@ -9,15 +9,14 @@
   --contrast-color: #333333;
 }
 
+section {
+  height: fit-content;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-}
-
-main {
-  width: 100%;
-  padding: 20px;
 }
 
 header {

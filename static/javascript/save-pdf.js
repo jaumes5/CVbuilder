@@ -10,6 +10,19 @@ downloadButton.addEventListener('click', () => {
   const toggleButton = content.querySelector('#menu-toggle');
   const easter_egg = content.querySelector('#easter-egg');
 
+  // Change the design to the no-grid version
+  // TODO Make the design compatible with the PDF
+  const currentLink = document.getElementById('design-link');
+  const newLink = document.createElement('link');
+  newLink.rel = 'stylesheet';
+  newLink.id = 'design-link';
+  const designButton = document.getElementById('toggle-design');
+
+  if (currentLink.getAttribute('href') === '/static/stylesheets/style-grid.css') {
+        newLink.href = '/static/stylesheets/style-no-grid.css';
+        designButton.classList.toggle('active');
+  }
+  document.head.replaceChild(newLink, currentLink);
 
   // Hide the navigation menu
   navMenu.style.display = 'none';

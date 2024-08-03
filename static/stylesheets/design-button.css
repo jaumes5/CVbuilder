@@ -1,0 +1,38 @@
+/* Toggle button styles */
+#design-toggle {
+  display: ruby-text;
+  margin: auto;
+}
+
+.toggle-button {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background-color: #ccc;
+  border: 2px solid #aaa;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 15px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.toggle-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-button.active {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+.toggle-button.active::before {
+  transform: translateX(60px);
+}

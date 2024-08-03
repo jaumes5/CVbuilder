@@ -3,6 +3,7 @@
   <head>
     <title>CV {{ name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+    <link id="design-link" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style-no-grid.css') }}" />
     <link rel="icon" href="{{ url_for('static', filename='images/favicon2.png') }}" />
     {% block stylesheets %}{% endblock %}
   </head>
