@@ -48,7 +48,7 @@ class ExperienceHandler:
             <p class="quaternary">{ job["company"] }</p>
             <p class="quinary">{ job["dates"] }</p>
             <p class="senary">{ job["description"] }</p>
-            <p class="quaternary">Technologies/Frameworks used:</p>
+            <p class="quaternary">Tech stack:</p>
             <ul class="technologies">
                 {get_techs(job["technologies"], pos)}
             </ul>

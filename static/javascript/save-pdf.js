@@ -21,8 +21,8 @@ downloadButton.addEventListener('click', () => {
   if (currentLink.getAttribute('href') === '/static/stylesheets/style-grid.css') {
         newLink.href = '/static/stylesheets/style-no-grid.css';
         designButton.classList.toggle('active');
+        document.head.replaceChild(newLink, currentLink);
   }
-  document.head.replaceChild(newLink, currentLink);
 
   // Hide the navigation menu
   navMenu.style.display = 'none';

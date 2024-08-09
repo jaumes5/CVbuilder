@@ -50,7 +50,7 @@
               <p class="quaternary">{{ job.company|safe }}</p>
               <p class="quinary">{{ job.dates }}</p>
               <p class="senary">{{ job.description|safe }}</p>
-              <p class="quaternary">Technologies/Frameworks used:</p>
+              <p class="quaternary">Tech stack:</p>
               <ul class="technologies">
                 {% for tech in job.technologies %}
                   {% if (current_index + loop.index) % 2 == 1%}

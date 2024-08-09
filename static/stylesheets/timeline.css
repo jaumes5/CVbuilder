@@ -2,7 +2,7 @@
   list-style: none;
   border-left: 3px solid #333;
   padding-left: 12px;
-  margin: 0 0 0 22px;
+  margin: 0 0 0 6px;
   overflow-wrap: break-word;
 }
 
@@ -61,9 +61,17 @@ ul.timeline > li::after {
 }
 
 .timeline li ul.technologies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 1100px) {
+    .timeline li ul.technologies {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .timeline li ul.technologies li {
