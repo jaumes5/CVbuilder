@@ -68,12 +68,14 @@
 
 #shift_div{
   display: flex;
+  margin-top: -1px;
   margin-left: 200px;
   transition: margin-left 0.5s ease-out;
 }
 
 #shift_div.shift{
   display: flex;
+  margin-top: -1px;
   margin-left: 0;
 }
 

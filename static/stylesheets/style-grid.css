@@ -3,3 +3,9 @@ main {
   width: 100%;
   padding: 20px;
 }
+
+/*#skills-list {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2, 1fr);*/
+/*    gap: 20px;*/
+/*}*/
