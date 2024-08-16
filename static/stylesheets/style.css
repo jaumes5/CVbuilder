@@ -48,6 +48,7 @@ main h2{
   border-bottom-right-radius: 100px;
   margin-left: -20px;
   padding-left: 20px;
+  break-inside: avoid;
 }
 
 .background {
