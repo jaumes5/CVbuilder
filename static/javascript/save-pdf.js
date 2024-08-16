@@ -19,9 +19,9 @@ downloadButton.addEventListener('click', () => {
   const designButton = document.getElementById('toggle-design');
 
   if (currentLink.getAttribute('href') === '/static/stylesheets/style-grid.css') {
-        newLink.href = '/static/stylesheets/style-no-grid.css';
-        designButton.classList.toggle('active');
-        document.head.replaceChild(newLink, currentLink);
+    newLink.href = '/static/stylesheets/style-no-grid.css';
+    designButton.classList.toggle('active');
+    document.head.replaceChild(newLink, currentLink);
   }
 
   // Hide the navigation menu
@@ -30,8 +30,11 @@ downloadButton.addEventListener('click', () => {
   easter_egg.style.display = 'none';
   main.style.marginLeft = '0';
 
+  content.classList.add('blur-shadow-active');
+
 
   // Create a new instance of html2pdf and save the PDF
   html2pdf().set({ html2canvas: { scale: 2 }, jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' } }).from(content).save("CVJaimeBoixados.pdf").then(() => {
+    content.classList.remove('blur-shadow-active');
   });
 });

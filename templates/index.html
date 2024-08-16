@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/skills.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/easter.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/language-plot.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/emulated-box-shadow.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/design-button.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}" />
   <script src="{{ url_for('static', filename='javascript/libs/jquery-3.7.1.min.js') }}"></script>
@@ -41,25 +42,36 @@
         <ul id="experience-list" class="timeline secondary">
           {% for job in experiences %}
             {% set current_index = loop.index %}
-            {% if current_index % 2 == 1%}
-              <li class="background-secondary">
-            {% else %}
-              <li class="background-tertiary">
-            {% endif %}
-              <h4 class="primary">{{ job.title }}</h4>
-              <p class="quaternary">{{ job.company|safe }}</p>
-              <p class="quinary">{{ job.dates }}</p>
-              <p class="senary">{{ job.description|safe }}</p>
-              <p class="quaternary">Tech stack:</p>
-              <ul class="technologies">
-                {% for tech in job.technologies %}
-                  {% if (current_index + loop.index) % 2 == 1%}
-                    <li class="background-secondary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">{{ tech }}</li>
-                  {% else %}
-                    <li class="background-tertiary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">{{ tech }}</li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
+              {% if current_index % 2 == 1%}
+                <li class="blur-shadow-emulation-secondary">
+                  <div class="background-secondary">
+              {% else %}
+                <li class="blur-shadow-emulation-tertiary">
+                  <div class="background-tertiary">
+              {% endif %}
+                <h4 class="primary">{{ job.title }}</h4>
+                <p class="quaternary">{{ job.company|safe }}</p>
+                <p class="quinary">{{ job.dates }}</p>
+                <p class="senary">{{ job.description|safe }}</p>
+                <p class="quaternary">Tech stack:</p>
+                <ul class="technologies">
+                  {% for tech in job.technologies %}
+                    {% if (current_index + loop.index) % 2 == 1%}
+                      <li class="blur-shadow-emulation-secondary">
+                        <div class="background-secondary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                            {{ tech }}
+                        </div>
+                      </li>
+                    {% else %}
+                      <li class="blur-shadow-emulation-tertiary">
+                        <div class="background-tertiary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                            {{ tech }}
+                        </div>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
             </li>
           {% endfor %}
         </ul>
@@ -69,15 +81,18 @@
         <h2 class="primary background-secondary"><i class="fa-solid fa-school background"></i>Education</h2>
         <ul class="timeline">
           {% for degree in education %}
-            {% if loop.index % 2 == 1 %}
-              <li class="background-secondary">
-            {% else %}
-              <li class="background-tertiary">
-            {% endif %}
-              <h3>{{ degree.title }}</h3>
-              <p class="quaternary">{{ degree.institution }}</p>
-              <p class="quinary">{{ degree.beg_year }} - {{ degree.end_year }}</p>
-              <p class="quaternary">{{ degree.description|safe }}</p>
+            {% if loop.index % 2 == 1%}
+                <li class="blur-shadow-emulation-secondary">
+                  <div class="background-secondary">
+              {% else %}
+                <li class="blur-shadow-emulation-tertiary">
+                  <div class="background-tertiary">
+              {% endif %}
+                <h3>{{ degree.title }}</h3>
+                <p class="quaternary">{{ degree.institution }}</p>
+                <p class="quinary">{{ degree.beg_year }} - {{ degree.end_year }}</p>
+                <p class="quaternary">{{ degree.description|safe }}</p>
+              </div>
             </li>
           {% endfor %}
         </ul>

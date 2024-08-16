@@ -38,12 +38,15 @@ class ExperienceHandler:
     def cast_to_html(experiences):
         def get_techs(techs, parent_idx: int):
             return "\n".join(
-                f"""<li {"class='background-secondary'" if (pos + parent_idx) %2 == 1 else "class='background-tertiary'"} title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </li>"""
+                f"""<li {"class='blur-shadow-emulation-secondary'> <div class='background-secondary'" if (pos + parent_idx) %2 == 1 
+                else "class='blur-shadow-emulation-tertiary'> <div class='background-tertiary''"} 
+                title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </div> </li>"""
                 for pos, tech in enumerate(techs)
             )
 
         return [
-            f"""{"<li class='background-secondary'>" if pos%2 == 0 else "<li class='background-tertiary'>"}
+            f"""{"<li class='blur-shadow-emulation-secondary'> <div class='background-secondary'>" if pos%2 == 0 
+            else "<li class='blur-shadow-emulation-tertiary'> <div class='background-tertiary'>"}
             <h4 class="primary">{ job["title"] }</h4>
             <p class="quaternary">{ job["company"] }</p>
             <p class="quinary">{ job["dates"] }</p>
@@ -52,6 +55,7 @@ class ExperienceHandler:
             <ul class="technologies">
                 {get_techs(job["technologies"], pos)}
             </ul>
+            </div>
             </li>"""
             for pos, job in enumerate(experiences)
         ]

@@ -1,0 +1,26 @@
+.blur-shadow-emulation-secondary {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+
+.blur-shadow-emulation-tertiary {
+  border-radius: 4px;
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.blur-shadow-emulation-secondary,
+.blur-shadow-emulation-tertiary {
+  background: none;
+}
+
+.blur-shadow-active .blur-shadow-emulation-secondary {
+  background: linear-gradient(180deg, var(--secondary-color) 47%, rgb(0 0 0 / 51%) 100%);
+}
+
+.blur-shadow-active .blur-shadow-emulation-tertiary {
+  background: linear-gradient(180deg, var(--tertiary-color) 47%, rgb(0 0 0 / 51%) 100%);
+}
