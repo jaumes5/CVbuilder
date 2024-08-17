@@ -35,7 +35,7 @@
     <main>
       <section id="about">
         <h2 class="primary background-secondary"><i class="fa-solid fa-user background"></i>About Me</h2>
-        <p>{{ about }}</p>
+        <p class="senary">{{ about }}</p>
       </section>
       <section id="experience">
         <h2 class="primary background-secondary"><i class="fa-solid fa-briefcase background"></i>Experience</h2>
@@ -58,13 +58,13 @@
                   {% for tech in job.technologies %}
                     {% if (current_index + loop.index) % 2 == 1%}
                       <li class="blur-shadow-emulation-secondary">
-                        <div class="background-secondary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                        <div class="background-secondary senary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
                             {{ tech }}
                         </div>
                       </li>
                     {% else %}
                       <li class="blur-shadow-emulation-tertiary">
-                        <div class="background-tertiary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                        <div class="background-tertiary senary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
                             {{ tech }}
                         </div>
                       </li>
@@ -88,7 +88,7 @@
                 <li class="blur-shadow-emulation-tertiary">
                   <div class="background-tertiary">
               {% endif %}
-                <h3>{{ degree.title }}</h3>
+                <h3 class="primary">{{ degree.title }}</h3>
                 <p class="quaternary">{{ degree.institution }}</p>
                 <p class="quinary">{{ degree.beg_year }} - {{ degree.end_year }}</p>
                 <p class="quaternary">{{ degree.description|safe }}</p>

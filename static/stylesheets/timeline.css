@@ -89,7 +89,6 @@ ul.timeline > li::after {
   display: block;
   padding: 5px 10px;
   cursor: pointer;
-  color: #333;
   font-size: 0.8em;
   border-radius: 10px;
 }

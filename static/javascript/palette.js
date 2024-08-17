@@ -9,7 +9,7 @@ const color_picker = {
          "tertiary": "#fcfcfc",
          "quaternary": "#555",
          "quinary": "#666",
-         "senary": "#555",
+         "senary": "#2d2d2d",
          "contrast": "#333333"
      },
      "orange": {
