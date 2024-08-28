@@ -12,12 +12,18 @@ def arg_parser():
         default=3000,
         help="Port to run the app on (default 3000)",
     )
+    parser.add_argument(
+        "-d",
+        "--dev_mode",
+        action="store_true",
+        help="Run the app in development mode",
+    )
     return parser.parse_args()
 
 
 def main():
     args = arg_parser()
-    create_app(args.port)
+    create_app(port=args.port, dev_mode=args.dev_mode)
 
 
 if __name__ == "__main__":

@@ -1,2 +1,4 @@
 Flask~=2.2.2
 black==24.4.2
+waitress==3.0.0
+paste==3.10.1
