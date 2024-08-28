@@ -12,6 +12,16 @@ const color_picker = {
          "senary": "#2d2d2d",
          "contrast": "#333333"
      },
+     "white": {
+         "background": "#333333",
+         "primary": "#FFFFFF",
+         "secondary": "#636363",
+         "tertiary": "#414141",
+         "quaternary": "#ccc",
+         "quinary": "#ddd",
+         "senary": "#eee",
+         "contrast": "#000000"
+     },
      "orange": {
          "background": "#FFFFFF",
          "primary": "#29292b",

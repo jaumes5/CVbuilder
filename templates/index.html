@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block content %}
-  <header class="background-primary">
+  <header class="background-primary background-text">
     <h1>{{ name }}</h1>
     <h2>{{ job_title }}</h2>
   </header>
@@ -99,7 +99,7 @@
       </section>
       <section id="skills">
         <h2 class="primary background-secondary"><i class="fa-solid fa-chart-pie background"></i>Skills</h2>
-        <ul id="skills-list">
+        <ul id="skills-list" class="primary">
           {% for category, skills in skills.items() %}
             <li>
               <span class="skills-category">{{ category }}:</span>

@@ -55,6 +55,10 @@ main h2{
   background-color: var(--background-color);
 }
 
+.background-text {
+  color: var(--background-color);
+}
+
 .primary {
   color: var(--primary-color);
 }
