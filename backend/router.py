@@ -12,7 +12,7 @@ app = Flask(__name__, template_folder="../templates", static_folder="../static")
 user_info: dict = {}
 exp_handler: Optional[ExperienceHandler] = None
 logger = logging.getLogger("waitress")
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.ERROR)
 
 
 @app.route("/health")
