@@ -17,6 +17,11 @@ The tool is a simple Flask application that reads the `content.json` file and
 renders the information in the `cv.html` template. The user can modify the
 information in the live version and download the CV as a PDF file.
 
+The `content.json` file is inspired by the JSON Resume schema (https://jsonresume.org/), an open
+source initiative to create a JSON-based standard for resumes. While is inspired by the JSON Resume schema,
+the `content.json` file is not compatible with it.
+
+
 ## Installation
 
 Launch the following command in your terminal:
