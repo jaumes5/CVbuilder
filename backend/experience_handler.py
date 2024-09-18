@@ -4,6 +4,23 @@ class ExperienceHandler:
         self.flatten_experiences = self.flatten_and_lower()
 
     def apply_filter(self, filter_exp: str, html_format: bool = True):
+        """
+        Apply a filter to the experiences.
+
+        If the filter is empty or all of its elements are empty, return
+        the original list of experiences. Otherwise, filter the
+        experiences by applying each element of the filter as a
+        substring search on the flattened experiences.
+
+        Args:
+            filter_exp (list[str]): The list of strings to search for in
+                the flattened experiences.
+            html_format (bool): If true, format the result as HTML.
+
+        Returns:
+            list[dict]: The filtered list of experiences. If html_format is
+                true, the experiences are formatted as HTML.
+        """
         if not filter_exp or all(not filter_str.strip() for filter_str in filter_exp):
             return (
                 self.experiences
@@ -26,6 +43,15 @@ class ExperienceHandler:
         return res if not html_format else self.cast_to_html(res)
 
     def flatten_and_lower(self) -> list[str]:
+        """
+        Return a list of strings, where each string is a flattened version of an
+        experience. The strings are flattened by joining all the values of the
+        experience, and then converting the result to lowercase.
+
+        Returns:
+            list[str]: A list of strings, where each string is a flattened
+                version of an experience.
+        """
         return [
             "".join(
                 ele.lower() if isinstance(ele, str) else str(ele).lower()
@@ -36,6 +62,20 @@ class ExperienceHandler:
 
     @staticmethod
     def cast_to_html(experiences):
+        """
+        Cast a list of experiences to a list of HTML strings.
+
+        The method takes a list of experiences, where each experience is a
+        dictionary with the keys "title", "company", "dates", "description",
+        and "technologies". The method returns a list of strings, where each
+        string is a rendered HTML version of an experience.
+
+        Args:
+            experiences (list[dict]): The list of experiences to render.
+
+        Returns:
+            list[str]: The list of rendered experiences as HTML strings.
+        """
         def get_techs(techs, parent_idx: int):
             return "\n".join(
                 f"""<li {"class='blur-shadow-emulation-secondary'> <div class='background-secondary senary'" if (pos + parent_idx) %2 == 1 
