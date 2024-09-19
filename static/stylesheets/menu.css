@@ -24,6 +24,12 @@
   padding: 0;
 }
 
+@media (max-height: 768px) {
+  #menu ul {
+    display: none;
+  }
+}
+
 #menu li {
  margin: 0;
 }
