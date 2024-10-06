@@ -78,8 +78,8 @@ class ExperienceHandler:
         """
         def get_techs(techs, parent_idx: int):
             return "\n".join(
-                f"""<li {"class='blur-shadow-emulation-secondary'> <div class='background-secondary senary'" if (pos + parent_idx) %2 == 1 
-                else "class='blur-shadow-emulation-tertiary'> <div class='background-tertiary senary'"} 
+                f"""<li {"class='blur-shadow-emulation-secondary'> <div class='background-secondary senary elevate-hover-effect'" if (pos + parent_idx) %2 == 1 
+                else "class='blur-shadow-emulation-tertiary'> <div class='background-tertiary senary elevate-hover-effect'"} 
                 title="Click to add to filter" onclick="addToFilter(\'{tech}\')"> {tech} </div> </li>"""
                 for pos, tech in enumerate(techs)
             )

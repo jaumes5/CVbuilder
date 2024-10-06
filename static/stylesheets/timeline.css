@@ -21,6 +21,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.elevate-hover-effect:hover {
+  transform: translateY(-0.25em);
+}
+
 .timeline li p a{
   text-decoration: none;
   font-weight: bold;

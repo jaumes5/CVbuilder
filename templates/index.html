@@ -58,13 +58,13 @@
                   {% for tech in job.technologies %}
                     {% if (current_index + loop.index) % 2 == 1%}
                       <li class="blur-shadow-emulation-secondary">
-                        <div class="background-secondary senary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                        <div class="background-secondary senary elevate-hover-effect" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
                             {{ tech }}
                         </div>
                       </li>
                     {% else %}
                       <li class="blur-shadow-emulation-tertiary">
-                        <div class="background-tertiary senary" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
+                        <div class="background-tertiary senary elevate-hover-effect" title="Click to add to filter" onclick="addToFilter('{{ tech }}')">
                             {{ tech }}
                         </div>
                       </li>
