@@ -20,24 +20,26 @@
     <button type="button" class="color-button" data-color="blue"></button>
     <button type="button" class="color-button" data-color="random"></button>
   </form>
-  <h3 id="display-header">Display Options:</h3>
-  <form id="display-options">
-    <label>
-      <input type="checkbox" name="display-info-panel" checked> Info
-    </label>
-    <label>
-      <input type="checkbox" name="display-about" checked> About Me
-    </label>
-    <label>
-      <input type="checkbox" name="display-experience" checked> Experience
-    </label>
-    <label>
-      <input type="checkbox" name="display-education" checked> Education
-    </label>
-    <label>
-      <input type="checkbox" name="display-skills" checked> Skills
-    </label>
-  </form>
+  <div class="hide">
+      <h3 id="display-header">Display Options:</h3>
+      <form id="display-options">
+        <label>
+          <input type="checkbox" name="display-info-panel" checked> Info
+        </label>
+        <label>
+          <input type="checkbox" name="display-about" checked> About Me
+        </label>
+        <label>
+          <input type="checkbox" name="display-experience" checked> Experience
+        </label>
+        <label>
+          <input type="checkbox" name="display-education" checked> Education
+        </label>
+        <label>
+          <input type="checkbox" name="display-skills" checked> Skills
+        </label>
+      </form>
+  </div>
   <script src="{{ url_for('static', filename='javascript/display-options.js') }}"></script>
   <h3>Experience's filter:</h3>
   <input type="text" id="experience-filter" class="experience-filter" placeholder="Click enter to add a filter">

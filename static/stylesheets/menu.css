@@ -24,8 +24,14 @@
   padding: 0;
 }
 
-@media (max-height: 768px) {
+@media (max-height: 824px) {
   #menu ul {
+    display: none;
+  }
+}
+
+@media (max-height: 682px) {
+  #menu .hide {
     display: none;
   }
 }
