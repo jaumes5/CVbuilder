@@ -1,7 +1,6 @@
 import logging
 from typing import Optional
 
-from backend.extra_description import switch_description
 from experience_handler import ExperienceHandler
 from utils import json_reader
 
@@ -26,12 +25,6 @@ def health_check():
 @app.route("/")
 def index():
     return render_template("index.html", **user_info)
-
-
-@app.route("/switch-description-type", methods=["POST"])
-def switch_description_type():
-    is_extended_description = request.form["is_extended_description"] == "true"
-    return switch_description(is_extended_description, user_info)
 
 
 @app.route("/filter", methods=["POST"])
