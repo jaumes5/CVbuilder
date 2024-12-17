@@ -7,13 +7,15 @@
         "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Dec 2022 - Present",
         "description": "Python developer at the <a href='https://www.sncf-reseau.com'>SNCF</a>. Working in a project for helping the <a href='https://www.sncf-reseau.com'>SNCF</a> anticipate and to plan future construction and maintenance works in all the French railway network.",
+        "extended-description": "<br/><br/>The API is done with Python and FastAPI. The application shows the users all the construction works in the French train rail network. The users are therefore able to anticipate and plan new construction works in the next years. The application also calculates the incompatibilities within the different construction works as well as alterative routes if the main route is closed.",
         "technologies": ["Python 3", "FastAPI", "PostgreSQL", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab"]
     },
     {
         "title": "Python Engineer",
         "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Sep 2021 - Dec 2022",
-        "description": "Python developer at <a href='https://amadeus.com'>Amadeus</a> in the project <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a>. <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a> digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security etc (source amadeus.com).",
+        "description": "Python developer at <a href='https://amadeus.com'>Amadeus</a> in the project <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a>. <a href='https://amadeus.com/en/topic/incubation/amadeus-travel-ready'>Traveler ID</a> digitalizes identity and health document verifications at every stage of the traveler journey. It provides to airlines, airports, hotels, travel agencies and other travel partners the means to perform automatic identification and COVID-19 document verification at any travel checkpoint such as check-in, boarding, airport security, etc (source amadeus.com).",
+        "extended-description": "<br/><br/>The whole project was developed in Python we used FastAPI for the web framework. The users uploaded their Covid documents and our goal was to validate first if it was a valid covid document and then if the document was compliant with the legislations of destination country. For extracting the information, we used OCR if the information was not directly accessible in text (like pictures for example). If the code was unable to the extract the information, the document was automatically transferred to a team in charge of manual confirmations.",
         "technologies": ["Python 3", "FastAPI", "Jenkins", "BitBucket"]
     },
     {
@@ -21,6 +23,7 @@
         "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Apr 2021 - Sep 2021",
         "description": "Python developer at <a href='https://www.sncf-reseau.com'>SNCF</a>. The projects revolved around developing multiple APIs for internal use at SNCF.",
+        "extended-description": "<br/><br/>The most important project was an API for detecting obstacles during a train ride. For example, if the train will be able to circulate in a tunnel without colliding with any speed panels. The code was done in Python using Django for the web framework.",
         "technologies": ["Python 3", "Django", "Jenkins", "JavaScript", "Gitlab"]
     },
     {
@@ -28,6 +31,7 @@
         "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Feb 2021 - Apr 2021",
         "description": "Python developer at <a href='https://www.groupama.fr'>Groupama</a>, working in projects oriented around OCR and similar machine learning subjects.",
+        "extended-description": "<br/><br/>The goal of the project was to automate the extraction of data of multiple insurance documents to minimize human intervention. This was done by a combination of OCR and other techniques; the whole backend code was done in Python.",
         "technologies": ["Python 3", "Scikit-learn", "Open shift", "JavaScript", "Gitlab"]
     },
     {
@@ -35,6 +39,7 @@
         "company": "<a href='https://meritis.fr'>Meritis</a>",
         "dates": "Sep 2018 - Feb 2021",
         "description": "<a href='https://www.se.com'>Schneider Electric</a>: Working on different projects, all of them using AWS.",
+        "extended-description": "<br/><br/>The main two projects were:<br/>• An ETL for migrating data from an Oracle database to Redshift (Python).<br/>• An application for being able to identify possible business opportunities for the sales representatives (in PySpark) using the data now in Redshift.",
         "technologies": ["Python 3", "Python 2", "Spark/PySpark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker", "RDS", "PostgreSQL", "MySQL"]
     },
     {

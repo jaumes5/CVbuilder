@@ -3,7 +3,12 @@ class ExperienceHandler:
         self.experiences = experiences
         self.flatten_experiences = self.flatten_and_lower()
 
-    def apply_filter(self, filter_exp: str, html_format: bool = True):
+    def apply_filter(
+        self,
+        filter_exp: str,
+        html_format: bool = True,
+        show_extra_description: bool = False,
+    ):
         """
         Apply a filter to the experiences.
 
@@ -16,6 +21,7 @@ class ExperienceHandler:
             filter_exp (list[str]): The list of strings to search for in
                 the flattened experiences.
             html_format (bool): If true, format the result as HTML.
+            show_extra_description: Show the field extended-description if activated
 
         Returns:
             list[dict]: The filtered list of experiences. If html_format is
@@ -25,7 +31,7 @@ class ExperienceHandler:
             return (
                 self.experiences
                 if not html_format
-                else self.cast_to_html(self.experiences)
+                else self.cast_to_html(self.experiences, show_extra_description)
             )
         ele_to_inspect = set(range(len(self.experiences)))
         for filter_str in filter_exp:
@@ -40,7 +46,9 @@ class ExperienceHandler:
             if not ele_to_inspect:
                 break
         res = [self.experiences[i] for i in sorted(ele_to_inspect)]
-        return res if not html_format else self.cast_to_html(res)
+        return (
+            res if not html_format else self.cast_to_html(res, show_extra_description)
+        )
 
     def flatten_and_lower(self) -> list[str]:
         """
@@ -61,7 +69,7 @@ class ExperienceHandler:
         ]
 
     @staticmethod
-    def cast_to_html(experiences):
+    def cast_to_html(experiences, show_extra_description: bool = False):
         """
         Cast a list of experiences to a list of HTML strings.
 
@@ -72,10 +80,12 @@ class ExperienceHandler:
 
         Args:
             experiences (list[dict]): The list of experiences to render.
+            show_extra_description: Show the field extended-description if activated
 
         Returns:
             list[str]: The list of rendered experiences as HTML strings.
         """
+
         def get_techs(techs, parent_idx: int):
             return "\n".join(
                 f"""<li {"class='blur-shadow-emulation-secondary'> <div class='background-secondary senary elevate-hover-effect'" if (pos + parent_idx) %2 == 1 
@@ -90,7 +100,7 @@ class ExperienceHandler:
             <h4 class="primary">{ job["title"] }</h4>
             <p class="quaternary">{ job["company"] }</p>
             <p class="quinary">{ job["dates"] }</p>
-            <p class="senary">{ job["description"] }</p>
+            <p class="senary">{ job["description"] + (job.get("extended-description", "") if show_extra_description else "") }</p>
             <p class="quaternary">Tech stack:</p>
             <ul class="technologies">
                 {get_techs(job["technologies"], pos)}

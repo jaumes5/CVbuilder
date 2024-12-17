@@ -1,8 +1,9 @@
 /* Toggle button styles */
-#design-toggle {
+.design-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .toggle-button {

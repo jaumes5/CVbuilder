@@ -1,6 +1,7 @@
 import logging
 from typing import Optional
 
+from backend.extra_description import switch_description
 from experience_handler import ExperienceHandler
 from utils import json_reader
 
@@ -27,9 +28,21 @@ def index():
     return render_template("index.html", **user_info)
 
 
+@app.route("/switch-description-type", methods=["POST"])
+def switch_description_type():
+    is_extended_description = request.form["is_extended_description"] == "true"
+    return switch_description(is_extended_description, user_info)
+
+
 @app.route("/filter", methods=["POST"])
 def experience_filter():
-    return jsonify(exp_handler.apply_filter(request.get_json()["filter"]))
+    request_json = request.get_json()
+    return jsonify(
+        exp_handler.apply_filter(
+            filter_exp=request_json["filter"],
+            show_extra_description=request_json["toggle_state"],
+        )
+    )
 
 
 def create_app(port: int = 3000, dev_mode: bool = False):

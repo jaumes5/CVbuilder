@@ -75,7 +75,10 @@ function sendAjaxRequest() {
     url: '/filter',
     type: 'POST',
     contentType: 'application/json', // specify the content type
-    data: JSON.stringify({ filter: updatedExperiences }), // stringify the data
+    data: JSON.stringify({
+      filter: updatedExperiences,
+      toggle_state: $('#extra-description').hasClass('active')
+    }), // stringify the data
     success: function(response) {
       experienceList.empty();
 
