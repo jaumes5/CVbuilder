@@ -8,7 +8,7 @@
         "dates": "Dec 2022 - Present",
         "description": "Python developer at the <a href='https://www.sncf-reseau.com'>SNCF</a>. Working in a project for helping the <a href='https://www.sncf-reseau.com'>SNCF</a> anticipate and to plan future construction and maintenance works in all the French railway network.",
         "extended-description": "<br/><br/>The API is done with Python and FastAPI. The application shows the users all the construction works in the French train rail network. The users are therefore able to anticipate and plan new construction works in the next years. The application also calculates the incompatibilities within the different construction works as well as alterative routes if the main route is closed.",
-        "technologies": ["Python 3", "FastAPI", "PostgreSQL", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab"]
+        "technologies": ["Python 3", "FastAPI", "PostgreSQL", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab", "Docker"]
     },
     {
         "title": "Python Engineer",
