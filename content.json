@@ -24,7 +24,7 @@
         "dates": "Apr 2021 - Sep 2021",
         "description": "Python developer at <a href='https://www.sncf-reseau.com'>SNCF</a>. The projects revolved around developing multiple APIs for internal use at SNCF.",
         "extended-description": "<br/><br/>The most important project was an API for detecting obstacles during a train ride. For example, if the train will be able to circulate in a tunnel without colliding with any speed panels. The code was done in Python using Django for the web framework.",
-        "technologies": ["Python 3", "Django", "Jenkins", "JavaScript", "Gitlab"]
+        "technologies": ["Python 3", "Django", "Jenkins", "JavaScript", "Gitlab", "Scikit-learn"]
     },
     {
         "title": "Python Engineer",
