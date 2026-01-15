@@ -6,7 +6,7 @@
         "title": "Data engineer/Tech Lead",
         "company": "<a href='https://www.devoteam.com'>Devoteam</a>",
         "dates": "June 2025 - Present",
-        "description": "Data Engineer at <a href='https://www.sncf-reseau.com'>EDF Power Solutions</a>. I work on the development of a product for calculating and monitoring KPIs in solar parcs.",
+        "description": "Data Engineer at <a href='https://edf-powersolutions.com'>EDF Power Solutions</a>. I work on the development of a product for calculating and monitoring KPIs in solar parcs.",
         "extended-description": "<br/><br/>The majority of the logic runs in Glue workers using PySpark. After all the Glue workers that calculate the different KPIs are done the user can see the data using Tableau. The application is able to track the evolution not only at the park level but also at the device level. That way the user can see if there's any problems in a particular device.",
         "technologies": ["Python 3", "PySpark", "AWS", "Glue", "Hudi", "Gitlab", "Lambda", "CodePipeline", "Docker", "S3", "DynamoDB"]
     },
