@@ -3,9 +3,17 @@
   "job_title":"Software Engineer",
   "experiences": [
     {
+        "title": "Data engineer/Tech Lead",
+        "company": "<a href='https://www.devoteam.com'>Devoteam</a>",
+        "dates": "June 2025 - Present",
+        "description": "Data Engineer at <a href='https://www.sncf-reseau.com'>EDF Power Solutions</a>. I work on the development of a product for calculating and monitoring KPIs in solar parcs.",
+        "extended-description": "<br/><br/>The majority of the logic runs in Glue workers using PySpark. After all the Glue workers that calculate the different KPIs are done the user can see the data using Tableau. The application is able to track the evolution not only at the park level but also at the device level. That way the user can see if there's any problems in a particular device.",
+        "technologies": ["Python 3", "PySpark", "AWS", "Glue", "Hudi", "Gitlab", "Lambda", "CodePipeline", "Docker", "S3", "DynamoDB"]
+    },
+    {
         "title": "Python Engineer",
         "company": "<a href='https://meritis.fr'>Meritis</a>",
-        "dates": "Dec 2022 - Present",
+        "dates": "Dec 2022 - May 2025",
         "description": "Python developer at the <a href='https://www.sncf-reseau.com'>SNCF</a>. Working in a project for helping the <a href='https://www.sncf-reseau.com'>SNCF</a> anticipate and to plan future construction and maintenance works in all the French railway network.",
         "extended-description": "<br/><br/>The API is done with Python and FastAPI. The application shows the users all the construction works in the French train rail network. The users are therefore able to anticipate and plan new construction works in the next years. The application also calculates the incompatibilities within the different construction works as well as alterative routes if the main route is closed.",
         "technologies": ["Python 3", "FastAPI", "PostgreSQL", "Airflow", "Pydantic", "Jenkins", "Kubernetes", "Gitlab", "Docker"]
@@ -40,7 +48,7 @@
         "dates": "Sep 2018 - Feb 2021",
         "description": "<a href='https://www.se.com'>Schneider Electric</a>: Working on different projects, all of them using AWS.",
         "extended-description": "<br/><br/>The main two projects were:<br/>• An ETL for migrating data from an Oracle database to Redshift (Python).<br/>• An application for being able to identify possible business opportunities for the sales representatives (in PySpark) using the data now in Redshift.",
-        "technologies": ["Python 3", "Python 2", "Spark/PySpark", "AWS: EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker", "RDS", "PostgreSQL", "MySQL"]
+        "technologies": ["Python 3", "Python 2", "Spark/PySpark", "AWS", "EC2", "S3", "Redshift", "EMR", "CloudFormation", "SageMaker", "RDS", "PostgreSQL", "MySQL"]
     },
     {
         "title": "Intern - Data Scientist",
