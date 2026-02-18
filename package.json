@@ -1,0 +1,17 @@
+{
+  "name": "cvbuilder",
+  "private": true,
+  "description": "Web-based CV/resume generator",
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "copy-libs": "node -e \"const fs=require('fs'),p=require('path'),d='static/javascript/libs';fs.mkdirSync(d,{recursive:true});[['node_modules/jquery/dist/jquery.min.js','jquery-3.7.1.min.js'],['node_modules/dompurify/dist/purify.min.js','purify.min.js'],['node_modules/jspdf/dist/jspdf.umd.min.js','jspdf.umd.min.js'],['node_modules/html2canvas/dist/html2canvas.min.js','html2canvas.min.js'],['node_modules/html2pdf.js/dist/html2pdf.bundle.min.js','html2pdf.bundle.min.js'],['node_modules/canvas-confetti/dist/confetti.browser.js','canvas-confetti.min.js']].forEach(([s,t])=>fs.copyFileSync(s,p.join(d,t)));\""
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "dompurify": "^3.2.4",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.2",
+    "jquery": "^3.7.1",
+    "jspdf": "^2.5.2"
+  }
+}

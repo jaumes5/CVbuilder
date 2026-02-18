@@ -10,6 +10,7 @@ If you want to see a live version of this project, you can take a look at my CV 
 
 ## Prerequisites
 * Python 3.9 or superior
+* Node.js and npm
 
 ## How it works
 
@@ -24,10 +25,11 @@ the `content.json` file is not compatible with it.
 
 ## Installation
 
-Launch the following command in your terminal:
+Launch the following commands in your terminal:
 
 ```bash
 pip install -r requirements.txt
+npm install
 ```
 
 ## Run
