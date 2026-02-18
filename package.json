@@ -10,8 +10,8 @@
     "canvas-confetti": "^1.9.3",
     "dompurify": "^3.2.4",
     "html2canvas": "^1.4.1",
-    "html2pdf.js": "^0.10.2",
+    "html2pdf.js": "^0.14.0",
     "jquery": "^3.7.1",
-    "jspdf": "^2.5.2"
+    "jspdf": "^4.1.0"
   }
 }
