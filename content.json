@@ -103,7 +103,7 @@
     "languages" : [
       {"language" :"Spanish", "level": "100", "hover":  "First Language"},
       {"language" :"French", "level": "90", "hover":  "C1-DALF"},
-      {"language" :"English", "level": "70", "hover":  "B2-TOEIC"},
+      {"language" :"English", "level": "70", "hover":  "C1-TOEIC"},
       {"language" :"Italian", "level": "30", "hover":  "B2-CILS"}
     ],
     "contact_info": [
