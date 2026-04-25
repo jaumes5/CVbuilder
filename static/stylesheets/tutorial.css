@@ -1,0 +1,93 @@
+/* Blocks pointer events to page content during tour */
+#tutorial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  pointer-events: all;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+#tutorial-overlay.tut-dim {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Spotlight — box-shadow creates darkness around the highlighted element */
+#tutorial-highlight {
+  position: fixed;
+  border-radius: 6px;
+  outline: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.65), 0 0 14px rgba(255, 255, 255, 0.25);
+  z-index: 8001;
+  pointer-events: none;
+  transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+#tutorial-tooltip {
+  position: fixed;
+  width: 290px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px 20px 14px;
+  z-index: 8002;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: top 0.3s ease, left 0.3s ease;
+  font-family: sans-serif;
+}
+
+#tutorial-tooltip h3 {
+  margin: 4px 0 8px;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+#tutorial-tooltip p {
+  margin: 0 0 14px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.tut-counter {
+  font-size: 0.72rem;
+  color: #999;
+  min-height: 14px;
+  margin-bottom: 2px;
+}
+
+.tut-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tut-btn {
+  font-family: sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tut-next {
+  background: #2b2525;
+  color: #ffffff;
+}
+
+.tut-next:hover {
+  background: #444444;
+}
+
+.tut-skip {
+  background: none;
+  color: #999999;
+  padding: 7px 4px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.tut-skip:hover {
+  color: #555555;
+}
