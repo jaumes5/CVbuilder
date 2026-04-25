@@ -13,6 +13,14 @@ section {
   height: fit-content;
 }
 
+.ai-note {
+  position: absolute;
+  font-size: 0;
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
